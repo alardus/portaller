@@ -18,4 +18,16 @@ def index():
 
 	return template('index', dict(error = None, addr = addr, status = status))
 
+
+@route('/beta')
+def index():
+	check = os.path.isfile('/var/tmp/sniproxy.pid')
+	status = ''
+	if check == True:
+		status = 'Portal is active. Have fun!'
+	else:
+		status = 'Oops, something goes wrong'
+
+	return template('beta', dict(error = None, addr = addr, status = status))
+
 run(host=addr, port=8080, reloader=True)
