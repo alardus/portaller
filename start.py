@@ -30,4 +30,10 @@ def index():
 
 	return template('beta', dict(error = None, addr = addr, status = status))
 
+
+@route('/setup')
+def index():
+	return template('setup', dict(error = None, addr = addr))
+
+
 run(host=addr, port=8080, reloader=True)
