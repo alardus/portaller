@@ -35,5 +35,35 @@ def index():
 def index():
 	return template('setup', dict(error = None, addr = addr))
 
+@route('/status')
+def index():
+	snipid = '/var/tmp/sniproxy.pid'
+	check = os.path.isfile(snipid)
+	sni = ''
+	if check == True:
+		with open(snipid, 'r') as file:
+			sni = file.readline()
+	else:
+		sni = 'process is dead'
+
+	la = os.popen("uptime | awk -F'[a-z]:' '{ print $2}'").read()
+
+	# connections = os.popen('netstat -ant | grep 80 | grep EST | sort -u | wc -l').read()
+
+	ip = []
+	connections = []
+	lst = os.popen("netstat -ant | grep 80 | grep EST | awk '{print $5}'").readlines()
+	for i in lst:
+		ip.append(i.split(":")[0])
+
+	for i in ip:
+		if i not in connections:
+			connections.append(i)
+		else:
+			pass
+
+	connections = len(connections)
+
+	return template('status', dict(error = None, sni = sni, la = la, connections = connections))
 
 run(host=addr, port=8080, reloader=True)
