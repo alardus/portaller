@@ -1,0 +1,23 @@
+options {
+    directory "/var/cache/bind";
+    rate-limit {
+	responses-per-second 3;
+		nodata-per-second 1;
+		ipv4-prefix-length 24;
+    };
+
+    version "[Secured]";
+    forwarders {
+        # these are the DNS servers from the VPS provider (look in /etc/resolv.conf if yours are different)
+        8.8.8.8;
+	8.8.4.4;
+    };
+
+    auth-nxdomain no;    # conform to RFC1035
+    listen-on-v6 { any; };
+    allow-query { any; };
+    allow-recursion { any; };
+    recursion yes;
+    dnssec-enable no;
+    dnssec-validation no;
+};

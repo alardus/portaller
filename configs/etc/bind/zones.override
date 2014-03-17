@@ -1,0 +1,15 @@
+zone "pandora.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "spotify.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "ip2location.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+

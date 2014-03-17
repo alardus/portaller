@@ -1,0 +1,28 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+include "/etc/bind/rndc.key";
+
+//acl "trusted" {
+//    127.0.0.1;
+//    173.z.z.z;        // Your ISP IP here (cable/DSL)
+//};
+
+include "/etc/bind/zones.override";
+
+logging {
+    channel bind_log {
+        file "/var/log/named/named.log" versions 5 size 30m;
+        severity info;
+        print-time yes;
+        print-severity yes;
+        print-category yes;
+    };
+    category default { bind_log; };
+    category queries { bind_log; };
+};
