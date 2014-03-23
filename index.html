@@ -30,26 +30,35 @@
         <h3 class="text-muted">Portaller</h3>
       </div>
 
-      <div class="jumbotron">
-        <h1>{{addr}}</h1>
-        <p class="lead">Put it in and use geo-locked services outside the U.S.</p>
+      <div class="jumbotron" style="float: left;">
+        <p class="lead" align="left">Change DNS to these IP and listen to Pandora and Spotify outside U.S:</p>
+        <p><h2 align="left">&mdash; primary:&nbsp;107.170.15.247</h2></p>
+        <p><h2 align="left">&mdash; secondary:&nbsp;77.88.8.8</h2></p>
       </div>
 
       <div class="row marketing">
         <div class="col-lg-4">
-          <h4><span class="glyphicon glyphicon-gift"></span>&nbsp;What's this</h4>
-          <p>Portaller &mdash; is a service that allows to use geo-locked services (like <a href="http://www.pandora.com" target="blank">Pandora</a> and <a href="http://www.spotify.com" target="blank">Spotify</a>) outside the U.S.</p>
+          <h4><span class="glyphicon glyphicon-gift"></span>&nbsp;What is this</h4>
+		  <p>Portaller &mdash; is DNS and proxy server. Since it is located in NY you can use geo-locked websites in countries outside U.S.</p>
+		  <p>For now we support only <a href="http://www.pandora.com" target="blank">Pandora</a> and <a href="http://www.spotify.com" target="blank">Spotify</a>.</p>
         </div>
+
+		<div class="col-lg-4">
+		  <h4><span class="glyphicon glyphicon-cog"></span>&nbsp;How it works</h4>
+		  <p>When your browser is trying to open a website it asks DNS about its IP. For all not geo-locked websites Portaller returns their original IP and you communicate directly.</p>
+		  <p>In case you are trying to reach Pandora or Spotify, Portaller returns his own IP instead of original.</p>
+		</div>
 
         <div class="col-lg-4">
           <h4><span class="glyphicon glyphicon-cog"></span>&nbsp;How to setup</h4>
-          <p>In order to use it <a href="http://portaller.com/setup">you have to change the DNS server address</a> of your computer or mobile device to IP address shown above.</p>
+          <p>In order to use it <a href="http://portaller.com/setup">you have to change the DNS</a> of your computer, mobile device or router to IP shown above.</p>
+          <p><b>N.B. Set primary and secondary address</b>. If something happens to Portaller, Pandora and Spotify will be not available but any other websites will.</p>
         </div>
 
-        <div class="col-lg-4">
+<!--        <div class="col-lg-4">
           <h4><span class="glyphicon glyphicon-ok-sign"></span>&nbsp;Network status</h4>
           <p>{{status}}</p>
-        </div>
+        </div>-->
       
         <div class="col-lg-12">
           <p style="padding: 50px; text-align: center">
@@ -67,7 +76,7 @@
 
   </body>
 
-  <div id="myModal" class="reveal-modal medium">
+  <div align="center" id="myModal" class="reveal-modal large">
     <h3>Форма для Яндекс.Денег</h3>
     <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/donate.xml?account=4100130212557&quickpay=donate&payment-type-choice=on&default-sum=100&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C+Portaller&target-visibility=on&project-name=portaller.com&project-site=http%3A%2F%2Fportaller.com&button-text=05" width="508" height="131"></iframe>
   </div>
