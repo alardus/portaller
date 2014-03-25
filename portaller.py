@@ -50,21 +50,7 @@ def index():
 
 	la = os.popen("uptime | awk -F'[a-z]:' '{ print $2}'").read()
 
-	# connections = os.popen('netstat -ant | grep 80 | grep EST | sort -u | wc -l').read()
-
-	ip = []
-	connections = []
-	lst = os.popen("netstat -ant | grep 80 | grep EST | awk '{print $5}'").readlines()
-	for i in lst:
-		ip.append(i.split(":")[0])
-
-	for i in ip:
-		if i not in connections:
-			connections.append(i)
-		else:
-			pass
-
-	connections = len(connections)
+	connections = os.popen("netstat -ant |grep EST | awk {'print $5'} | grep -v :80 | grep -v :443| cut -d : -f 1 | sort | uniq| wc -l").read().rstrip()
 
 	return template('status', dict(error = None, sni = sni, la = la, connections = connections))
 
