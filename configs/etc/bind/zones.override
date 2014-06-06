@@ -13,3 +13,12 @@ zone "ip2location.com." {
     file "/etc/bind/db.override";
 };
 
+zone "atv-ext.amazon.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "atv-ps.amazon.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
