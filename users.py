@@ -1,23 +1,40 @@
-import os
+import os, sys
 
-lst = []
-uniq = []
+log_file = []
+date_search = []
+list_of_client = []
+list_of_client_filtered = []
+uniq_clients = []
+search_pattern = raw_input('Search pattern: ')
 
-os.popen("cat named.* > log.txt")
-os.popen("cat log.txt | awk '{print $6}' > clients.txt")
+os.popen('cat ./named.* >> log_file.txt')
+with open('log_file.txt', 'r') as f:
+	log_file = f.readlines()
 
-with open('clients.txt', 'r') as f:
-	f = f.readlines()
-	for i in f:
-		i = i.split('#')
-		lst.append(i[0])
+print 'Entries in log', len(log_file)
 
-for i in lst:
-	if i not in uniq:
-		uniq.append(i)
+for i in log_file:
+	if 'client' in i:
+		if search_pattern in i:
+			date_search.append(i)
 	else:
 		pass
 
-print len(uniq)
-os.remove("clients.txt")
-os.remove("log.txt")
+print '... for', search_pattern, len(date_search)
+
+for i in date_search:
+	i = i.split()
+	list_of_client.append(i[5])
+
+for i in list_of_client:
+	i = i.split('#')
+	list_of_client_filtered.append(i[0])
+
+for i in list_of_client_filtered:
+	if i not in uniq_clients:
+		uniq_clients.append(i)
+	else:
+		pass
+
+print '... uniq clnts', len(uniq_clients)
+os.remove("log_file.txt")
