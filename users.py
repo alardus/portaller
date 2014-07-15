@@ -14,8 +14,8 @@ search_pattern = raw_input('Search pattern: ')
 
 
 # phase 1, count how many uniq. users we had 
-#os.popen('cat ./named.* > log_file.txt')
-with open('log_file_small.txt', 'r') as f:
+os.popen('cat ./named.* > log_file.txt')
+with open('log_file.txt', 'r') as f:
 	log_file = f.readlines()
 
 print 'Entries in log', len(log_file)
@@ -73,7 +73,7 @@ class ThreadUrl(threading.Thread):
       		pass
 
       # if found more then X queries, do something
-      if count > 5:
+      if count > 2:
       	global query_counter
       	query_counter.append(host)
 
@@ -84,7 +84,7 @@ class ThreadUrl(threading.Thread):
 
 def main():
   #spawn a pool of threads, and pass them queue instance 
-  for i in range(1):
+  for i in range(5):
     t = ThreadUrl(queue)
     t.setDaemon(True)
     t.start()
@@ -102,3 +102,5 @@ if phase2 == 'yes' or phase2 == 'y':
 
 else:
   print 'Finished.'
+
+os.remove("log_file.txt")
