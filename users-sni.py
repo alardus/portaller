@@ -8,6 +8,7 @@ with open('sniproxy.log', 'r') as fl:
 
 	for i in fl:
 		if 'portaller.com' not in i:
+			#print i
 			i = i.split()
 			i = i[2].split(':')
 			data.append(i[0])
