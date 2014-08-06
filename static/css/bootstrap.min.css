@@ -734,6 +734,7 @@ pre code {
   overflow-y: scroll;
 }
 .container {
+  padding-top: 20px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -4479,9 +4480,16 @@ a.thumbnail.active {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .alert-warning hr {
   border-top-color: #f7e1b5;
+}
+.alert-warning p {
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
 }
 .alert-warning .alert-link {
   color: #66512c;

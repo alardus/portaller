@@ -22,3 +22,8 @@ zone "atv-ps.amazon.com." {
     type master;
     file "/etc/bind/db.override";
 };
+
+zone "netflix.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
