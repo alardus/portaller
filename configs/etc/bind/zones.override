@@ -27,3 +27,8 @@ zone "netflix.com." {
     type master;
     file "/etc/bind/db.override";
 };
+
+zone "rdio.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
