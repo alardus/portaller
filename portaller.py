@@ -34,6 +34,6 @@ def index():
 
 	la = os.popen("uptime | awk -F'[a-z]:' '{ print $2}'").read()
 
-	connections = os.popen("netstat -ant | grep EST | awk {'print $5'} | cut -d : -f 1 | sort | uniq | wc -l").read().rstrip()
+	connections = os.popen("netstat -atW | grep EST | awk {'print $5'} | cut -d : -f 1 | sort | uniq | grep -v pandora | grep -v spotify | grep -v amazon | grep -v netflix | grep -v rdio | grep -v portaller | wc -l").read().rstrip()
 
 	return template('status', dict(error = None, sni = sni, la = la, connections = connections))
