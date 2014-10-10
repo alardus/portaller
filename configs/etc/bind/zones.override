@@ -32,3 +32,18 @@ zone "rdio.com." {
     type master;
     file "/etc/bind/db.override";
 };
+
+zone "tunein.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "radio.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "streamtheworld.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
