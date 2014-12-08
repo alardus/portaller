@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Portaller &mdash; listen to Pandora and Spotify outside the U.S.</title>
+    <title>Portaller &mdash; use Pandora, Spotify, Netflix, Rdio and Amazon Video outside U.S.</title>
 
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/jumbotron-narrow.css" rel="stylesheet">
     <link href="/static/css/foundation.css" rel="stylesheet">
+    <link href="/static/css/docs.min.css" rel="stylesheet">
 
     <script src="/static/js/jquery.js"></script>
     <script src="/static/js/foundation.min.js"></script>
@@ -18,116 +19,157 @@
   </head>
 
   <body>
-
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
            <li>
              <p><a href="#" data-reveal-id="myModal" data-reveal class="btn btn-success">Яндекс.Деньги</a>
              <a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DP99B5UCEK2MC" role="button" target="blank">PayPal</a></p>
-         </li>
+           </li>
         </ul>
         <a href="http://portaller.com"><h3 class="text-muted">Portaller</h3></a>
       </div>
 
-	  <div class="jumbotron" style="float: left;">
-        <p class="lead" align="left">Change DNS to these IP and listen to Pandora and Spotify outside U.S:</p>
-	    <p><h2 align="left">&mdash; primary:&nbsp;107.170.15.247</h2></p>
-	    <p><h2 align="left">&mdash; secondary:&nbsp;77.88.8.8</h2></p>
+	<div class="row">
+  	  <div class="col-md-3" id="leftCol">              
+	    <div class="well"> 
+		  <p>Devices</p>
+            <ul class="nav nav-stacked" id="sidebar">
+              <li><a href="#sec1">Windows 7</a></li>
+              <li><a href="#sec2">Mac OS X</a></li>
+              <li><a href="#sec3">PlayStation 4</a></li>
+              <li><a href="#sec4">XBOX One</a></li>
+              <li><a href="#sec5">Samsung SmartTV</a></li>
+              <li><a href="#sec6">iPhone</a></li>
+            </ul>
+          <p>Routers</p>
+            <ul class="nav nav-stacked" id="sidebar">
+              <li><a href="#sec7">Home Router <small>(Asus, Zyxel, etc.)</small></a></li>
+              <li><a href="#sec8">DNSmasq</a></li>
+            </ul>
+  		</div>
+      </div>  
+      
+      <div class="col-md-9">
+        <h2 id="sec0">How to setup</h2>
+        <p>That is two ways of how to use Portaller. If you want to unblock content only for one device (e.g. iPhone or SmartTV) &mdash; find that device in the list at left sidebar and set it up as described.
+
+		<p>But if you want to use it on many devices inside your home network at the same time (e.g. listen Pandora on iPhone and watch Netflix on TV) &mdash; best way is write Portaller DNS address to the settings of your router. It will push right DNS settings to any devices connected to it.</p>
+              	
+      <div class="bs-callout bs-callout-danger">
+	    <h4>Android not supported</h4>
+		<p>Due some limitations in Android TLS implementation, Portaller not support any of Android devices at this time ;(</p> 
+        <p>Sorry about that.</p>
 	  </div>
-
-      <!-- Start setup menu -->
-      <div class="row marketing">
-
-        <div class="col-lg-6">
-          <p align='center'>
-          <a href="#windows"><h2>Instructions for Windows</h2></a>
-          </p>
+              	
+      <br><hr>            	        
+      <h2 id="sec1">Windows 7</h2>
+        <li> Click to the "Network" icon at status bar and open "Network center";</li>
+        <li> Select current active connection;</li>
+        <li> Click "Options" at the window appeared;</li>
+        <li> Select "IPv4" row and choose "Options";</li>
+        <li> Put "107.170.15.247" as primary DNS and "77.88.8.8" as secondary in the "Preferred DNS" section.</li><br>
+              	
+        <div class="row">  
+          <div class="col-md-4"><a href="http://portaller.com/static/img/2.png" target="_blank"><img src="http://portaller.com/static/img/2.png" class="img-responsive"></a></div>               	
+          <div class="col-md-4"><a href="http://portaller.com/static/img/3.png" target="_blank"><img src="http://portaller.com/static/img/3.png" class="img-responsive"></a></div>                  	
+          <div class="col-md-4"><a href="http://portaller.com/static/img/4.png" target="_blank"><img src="http://portaller.com/static/img/4.png" class="img-responsive"></a></div>                  	
+          <div class="col-md-4"><a href="http://portaller.com/static/img/5.png" target="_blank"><img src="http://portaller.com/static/img/5.png" class="img-responsive"></a></div>
         </div>
+              	              
+      <br><hr>              
+      <h2 id="sec2">Mac OS X</h2>
+        <li> Open "Network" section;</li>
+        <li> Select active connection and click "Options";</li>
+        <li> Open "DNS" section;</li>
+        <li> Click "Add" and put "107.170.15.247" as primary DNS and "77.88.8.8" as secondary.</li><br>
 
-        <div class="col-lg-6">
-          <p align='center'>
-          <a href="#mac"><h2>Instructions for Mac OS</h2></a>
-          </p>
+        <div class="row">
+          <div class="col-md-4"><a href="http://portaller.com/static/img/mac1.png" target="_blank"><img src="http://portaller.com/static/img/mac1.png" class="img-responsive"></a></div>
+          <div class="col-md-4"><a href="http://portaller.com/static/img/mac2.png" target="_blank"><img src="http://portaller.com/static/img/mac2.png" class="img-responsive"></a></div>
+          <div class="col-md-4"><a href="http://portaller.com/static/img/mac3.png" target="_blank"><img src="http://portaller.com/static/img/mac3.png" class="img-responsive"></a></div>
+          <div class="col-md-4"><a href="http://portaller.com/static/img/mac4.png" target="_blank"><img src="http://portaller.com/static/img/mac4.png" class="img-responsive"></a></div>
         </div>
-       </div>
-      <!-- End setup menu -->
+              		              
+      <br><hr>             
+      <h2 id="sec3">PlayStation 4</h2>
+        <li> Navigate to the settings menu ​and select "Network";</li>
+        <li> Select "Set Up Internet Connection";</li>
+        <li> On the next screen select "Custom​";</li>
+        <li> Chose your connection method &mdash; "Wi-Fi" or "LAN Cable";</li>
+        <li> Set obtain your IP address automatically;</li>
+        <li> DHCP host name must not be specified &mdash; select "Do Not Specify";</li>
+        <li> Next is your DNS settings &mdash; select "Manual";</li>
+        <li> Put "107.170.15.247" as primary DNS and "77.88.8.8" as secondary;</li>
+        <li> Once you have done this press next and then test your connection.</li>
+                
+      <br><hr>               
+      <h2 id="sec4">XBOX One</h2>
+        <li> Go to the Dashboard and press the "Options" button on Xbox One controller;</li>
+        <li> Select "Settings" from the menu that will appear;</li>
+        <li> Select "Network";</li>
+        <li> Select "Advanced Settings";</li>
+        <li> Scroll to "DNS Settings" and select "Manual";</li>
+        <li> Put "107.170.15.247" as primary DNS and "77.88.8.8" as secondary;</li>
+        <li> Save changes and Xbox One will now check the internet connection.</li>
+                
+      <br><hr>                
+      <h2 id="sec5">Samsung SmartTV</h2>
+        <p><h5><b>Changing SmartTV region</b></h5></p>
+        <p>When TV run for the first time, it's contains few applications allowed for your country. Many presets of apps for local markets not include Netflix, Pandora and other apps popular in USA, so if you want to use them — you need to swith SmartTV region of your TV on United States.</p><br>                
+        <p><b>For older model with original remote</b> &mdash; click on the "Smart Button" on remote and when you see the Smart Hub &mdash; press <span class="glyphicon glyphicon-forward"></span>, 2, 8, 9, <span class="glyphicon glyphicon-backward"></span>.</p><br>                
+        <p><b>For new F/H series launched in 2013/2014</b> &mdash; enter to settings menu and navigate to "Support > Self Diagnosis > Reset". Make a reset (your previous information will be available) and stop the setup when you come to the Smart Hub Terms & Conditions, Privacy Policy page. Press the following sequence on your remote:</p><br>              	
+        <p><img src="/static/img/f-series-samsung-change-region-guide.jpg"></p>                
+        <br><p>The internet service location will appear. If you wish to view US apps (Vudu, Hulu plus etc) select "United States". Note that you cannot select 2 regions, i.e you can't have access to Netflix (US) and IVI (RU) at the same time. You must repeat the smart hub steps every time you want to change.</p>              	
+        <p>When the Smart Hub has restarted it will now be set to your chosen region and download the default apps for your new region.</p>             	
+	    <br><p><h5><b>Setup DNS address</b></h5></p>
+        <li> Press "Menu" button on remote, scroll down to "Network" and chose "Network Settings";</li>
+        <li> Select type of your internet connection and then select "IP Settings";</li>
+        <li> Scroll down to DNS settings and put "107.170.15.247" as primary DNS and "77.88.8.8" as secondary;</li>
+        <li> Your connection will test itself. Press "Next" to save the settings and exit the menu.</li>
 
-      <!-- Windows setup section -->
-      <div style="padding-top: 100px;" class="row marketing">
-
-        <a name="windows"></a>        
-        <h3><span class="glyphicon glyphicon-cog"></span>&nbsp;How to set up Portaller in Windows</h3>
-
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/1.png" target="blank"><img src="/static/img/1.png" height="223" width="160"></img></a>
-          <h4>1. Open &laquo;Network center&raquo;</h4>
+      <br><hr>
+      <h2 id="sec6">iPhone</h2>
+        <p>
+        <li> Launch "Settings" and click on Wi-Fi;</li>
+		<li> Click on the network you are currently connected;</li>
+		<li> Click on the DNS field;</li>
+		<li> Fill DNS separated by comma: "107.170.15.247, 77.88.8.8".</li>
+        </p>                
+        <div class="row">
+          <div class="col-md-4"><a href="/static/img/iphone1.png" target="_blank"><img src="/static/img/iphone1.png" class="img-responsive"></a></div>
+          <div class="col-md-4"><a href="/static/img/iphone2.png" target="_blank"><img src="/static/img/iphone2.png" class="img-responsive"></a></div>
+          <div class="col-md-4"><a href="/static/img/iphone3.png" target="_blank"><img src="/static/img/iphone3.png" class="img-responsive"></a></div>
         </div>
+                              
+      <br><hr>              
+      <h2 id="sec7">Home Router <small>(Asus, Zyxel, etc.)</small></h2>
+                
+                
+      <br><hr>             
+      <h2 id="sec8">DNSmasq</h2>
+        <p>If you use local DNS server, like DNSmasq, you can allow to enable custom DNS settings on particular domains. Add host that you want unlock to dnsmasq configuration file and restart service:</p>               
+        <p><pre>$ nano /etc/dnsmasq.conf</pre></p>                
+        <p><pre>server=/netflix.com/107.170.15.247<br>server=/pandora.com/107.170.15.247<br>...</pre></p>				
+        <p><pre>$ service dnsmasq restart</pre></p>
+                
+      <br><br>
+                
+      </div> <!-- col-md-9 -->
+    </div> <!-- row -->
 
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/2.png" target="blank"><img src="/static/img/2.png" height="223" width="274"></img></a>
-          <h4>2. Select active connection</h4>       
-        </div>
-
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/3.png" target="blank"><img src="/static/img/3.png" height="223" width="183"></img></a>
-          <h4>3. Click &laquo;Options&raquo; in the new window</h4>          
-        </div>
-
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/4.png" target="blank"><img src="/static/img/4.png" height="223" width="177"></img></a>
-          <h4>4. Select IPv4 row and choose &laquo;Options&raquo;</h4>          
-        </div>
-
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/5.png" target="blank"><img src="/static/img/5.png" height="223" width="200"></img></a>
-          <h4>5. Set Portaller IP shown above in &laquo;Preferred DNS&raquo; section</h4>          
-        </div>
-      </div>
-      <!-- End Windows setup section -->
-
-      <!-- Mac OS setup section -->
-
-      <div style="padding-top: 100px;" class="row marketing">
-
-        <a name="mac"></a>        
-        <h3><span class="glyphicon glyphicon-cog"></span>&nbsp;How to set up Portaller in Mac OS</h3>
-
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/mac1.png" target="blank"><img src="/static/img/mac1.png" height="280" width="334"></img></a>
-          <h4>1. Open &laquo;Network&raquo; section</h4>
-        </div>
-
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/mac2.png" target="blank"><img src="/static/img/mac2.png" height="280" width="334"></img></a>
-          <h4>2. Select active connection and click &laquo;Options&raquo;</h4>
-        </div>
-
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/mac3.png" target="blank"><img src="/static/img/mac3.png" height="280" width="334"></img></a>
-          <h4>3. Open &laquo;DNS&raquo; section</h4>
-        </div>
-
-        <div align="center" style="padding-top:20px" class="col-lg-6">
-          <a href="/static/img/mac4.png" target="blank"><img src="/static/img/mac4.png" height="280" width="334"></img></a>
-          <h4>4. Click &laquo;Add&raquo; and set Portaller IP shown above</h4>
-        </div>
-        <!-- End Mac OS setup section -->
-
-      </div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart-empty"></span>&nbsp;2014, <a href="http://www.facebook.com/alardus">Alexander Bykov</a>.<span style="float: right" class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter" data-yashareTheme="counter"></span></p>
-      </div>
+    <div class="footer">
+      <p><span class="glyphicon glyphicon-heart-empty"></span>&nbsp;2014&#150;{{year}}, <a href="http://www.facebook.com/alardus">Alexander Bykov</a>
+    </div>
     </div> <!-- /container -->
 
-<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24248731 = new Ya.Metrika({id:24248731, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24248731" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24248731 = new Ya.Metrika({id:24248731, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24248731" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
   </body>
-
   <div align="center" id="myModal" class="reveal-modal large">
     <h3>Форма для Яндекс.Денег</h3>
     <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/donate.xml?account=4100130212557&quickpay=donate&payment-type-choice=on&default-sum=100&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C+Portaller&target-visibility=on&project-name=portaller.com&project-site=http%3A%2F%2Fportaller.com&button-text=05" width="508" height="131"></iframe>
   </div>
-  
 </html>

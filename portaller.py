@@ -2,6 +2,7 @@ import bottle, os
 from bottle import template, static_file
 
 app = application = bottle.Bottle()
+copyright = '2015'
 
 @app.route('/static/<filepath:path>')
 def server_static(filepath):
@@ -9,17 +10,17 @@ def server_static(filepath):
 
 @app.route('/')
 def index():
-	return template('index', dict(error = None))
+	return template('index', dict(error = None, year = copyright))
 
 
 @app.route('/beta')
 def index():
-	return template('beta', dict(error = None))
+	return template('beta', dict(error = None, year = copyright))
 
 
 @app.route('/setup')
 def index():
-	return template('setup', dict(error = None))
+	return template('setup', dict(error = None, year = copyright))
 
 @app.route('/status')
 def index():
@@ -36,4 +37,4 @@ def index():
 
 	connections = os.popen("netstat -atW | grep EST | awk {'print $5'} | cut -d : -f 1 | sort | uniq | grep -v pandora | grep -v spotify | grep -v amazon | grep -v netflix | grep -v rdio | grep -v portaller | wc -l").read().rstrip()
 
-	return template('status', dict(error = None, sni = sni, la = la, connections = connections))
+	return template('status', dict(error = None, year = copyright, sni = sni, la = la, connections = connections))
