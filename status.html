@@ -5,46 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Portaller &mdash; listen to Pandora and Spotify outside the U.S.</title>
+    <title>Portaller &mdash; use Pandora, Spotify, Netflix, Rdio and Amazon Video outside U.S.</title>
 
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/jumbotron-narrow.css" rel="stylesheet">
   </head>
 
   <body>
-
     <div class="container">
       <div class="header">
-        <h3 class="text-muted">Portaller Status</h3>
+        <a href="http://portaller.com"><h3 class="text-muted">Portaller</h3></a>
       </div>
 
       <div class="row marketing">
-        <div class="col-lg-4">
-          <h4><span class="glyphicon glyphicon-user"></span>&nbsp;Active Connections</h4>
-          <p>{{connections}}</p>
-        </div>
+	    <table class="table table-striped">
+		  <tr>
+			<td><b>Connections</b></td>
+			<td><b>PID</b></td>
+			<td><b>LA</b></td>
+			<td><b>Traffic</b></td>
+		  </tr>
+		  <tr>
+			<td>{{connections}}</td>
+			<td>{{sni}}</td>
+			<td>{{la}}</td>
+			<td><a href="/static/mrtg/127.0.0.1_eth0.html"><img src="/static/mrtg/127.0.0.1_eth0-day.png" width="100" height="27"></a></td>
+		  </tr>
+		</table>
+      </div>
 
-        <div class="col-lg-4">
-          <h4><span class="glyphicon glyphicon-globe"></span>&nbsp;SNI Proxy</h4>
-          <p>{{sni}}</p>
-        </div>
-
-        <div class="col-lg-4">
-          <h4><span class="glyphicon glyphicon-stats"></span>&nbsp;Load Average</h4>
-          <p>{{la}}</p>
-        </div>
-
-        <div class="col-lg-12">
-          <p><a href="/static/mrtg/127.0.0.1_eth0.html"><img src="/static/mrtg/127.0.0.1_eth0-day.png"></a></p>
-        </div>
-        </div>
-
-        <div class="footer">
-          <p><span class="glyphicon glyphicon-heart-empty"></span>&nbsp;2014&#150;{{year}}, <a href="http://www.facebook.com/alardus">Alexander Bykov</a></p>
-        </div>
     </div> <!-- /container -->
 
-<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24248731 = new Ya.Metrika({id:24248731, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24248731" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24248731 = new Ya.Metrika({id:24248731, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24248731" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
   </body>
 </html>

@@ -84,7 +84,7 @@ class ThreadUrl(threading.Thread):
 
 def main():
   #spawn a pool of threads, and pass them queue instance 
-  for i in range(5):
+  for i in range(2):
     t = ThreadUrl(queue)
     t.setDaemon(True)
     t.start()

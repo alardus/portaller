@@ -19,22 +19,31 @@
 
   <body>
 
-<!--     <div class="alert-warning">
-       <p>We have some difficulties with our data center and we are working to resolve it.
-       <br>Sorry for the trouble and thank you for your patience.</p>
-    </div> -->
+<!--
+    <div class="alert-warning">
+      <p>We have some difficulties with our data center and we are working to resolve it.
+      <br>Sorry for the trouble and thank you for your patience.</p>
+    </div>
+-->
 
     <div class="container">
       <div class="header">
+	      
+	    <!-- Menu -->
         <ul class="nav nav-pills pull-right">
-           <li>
-             <p><a href="#" data-reveal-id="myModal" data-reveal class="btn btn-success">Яндекс.Деньги</a>
-             <a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DP99B5UCEK2MC" role="button" target="blank">PayPal</a></p>
-         </li>
+          <li>
+            <p>
+	          <a href="http://portaller.com/setup" class="btn btn-primary">Setup Instructions</a>
+	          <a href="#" data-reveal-id="myModal" data-reveal class="btn btn-success">Яндекс.Деньги</a>
+              <a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DP99B5UCEK2MC" role="button" target="blank">PayPal</a>
+            </p>
+          </li>
         </ul>
+        
         <h3 class="text-muted">Portaller</h3>
       </div>
 
+      <!-- Body -->
       <div class="jumbotron" style="float: left;">
         <p class="lead" align="left">Change DNS to these IP and use Pandora, Spotify, Netflix and other services outside U.S:</p>
         <p><h2 align="left">&mdash; primary:&nbsp;107.170.15.247</h2></p>
@@ -44,15 +53,15 @@
       <div class="row marketing">
         <div class="col-lg-4">
           <h4><span class="glyphicon glyphicon-gift"></span>&nbsp;What is this</h4>
-      <p>Portaller &mdash; is DNS and proxy server. Since it is located in NY you can use geo-locked websites in countries outside U.S.</p>
-      <p>For now we support <a href="http://www.pandora.com" target="blank">Pandora</a>, <a href="http://www.spotify.com" target="blank">Spotify</a>, <a href="http://www.netflix.com" target="blank">Netflix</a>, <a href="http://www.rdio.com" target="blank">Rdio</a>, <a href="http://www.amazon.com" target="blank">Amazon Video</a> and <a href="http://www.tunein.com" target="blank">TuneIn streams</a>.</p>
+          <p>Portaller &mdash; is DNS and proxy server. Since it is located in NY you can use geo-locked websites in countries outside U.S.</p>
+          <p>For now we support <a href="http://www.pandora.com" target="blank">Pandora</a>, <a href="http://www.spotify.com" target="blank">Spotify</a>, <a href="http://www.netflix.com" target="blank">Netflix</a>, <a href="http://www.rdio.com" target="blank">Rdio</a>, <a href="http://www.amazon.com" target="blank">Amazon Video</a> and <a href="http://www.tunein.com" target="blank">TuneIn streams</a>.</p>
         </div>
 
-    <div class="col-lg-4">
-      <h4><span class="glyphicon glyphicon-cog"></span>&nbsp;How it works</h4>
-      <p>When your browser is trying to open a website it asks DNS about its IP. For all not geo-locked websites Portaller returns their original IP and you communicate directly.</p>
-      <p>In other cases, Portaller returns his own IP instead of original.</p>
-    </div>
+        <div class="col-lg-4">
+          <h4><span class="glyphicon glyphicon-cog"></span>&nbsp;How it works</h4>
+          <p>When your browser is trying to open a website it asks DNS about its IP. For all not geo-locked websites Portaller returns their original IP and you communicate directly.</p>
+          <p>In other cases, Portaller returns his own IP instead of original.</p>
+        </div>
 
         <div class="col-lg-4">
           <h4><span class="glyphicon glyphicon-headphones"></span>&nbsp;How to setup</h4>
@@ -62,27 +71,30 @@
       
         <div class="col-lg-12">
           <p style="padding-top: 50px; text-align: center">
-            <a href="http://pandora.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/pandora_logo.jpg" hspace="15" width="185" height="40"></a>
-            <a href="http://spotify.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/spotify_logo.jpg" hspace="15" width="185" height="71"></a>
-            <a href="http://amazon.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/amazon_logo.png" hspace="15" width="185" height="49"></a>
-            <a href="http://netflix.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/netflix_logo.png" hspace="15" width="185" height="56"></a>
-            <a href="http://rdio.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/rdio_logo.png" hspace="15" width="185" height="71"></a>
-            <a href="http://tunein.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/tunein_logo.png" hspace="15" width="185" height="71"></a>
+          <a href="http://pandora.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/pandora_logo.jpg" hspace="15" width="185" height="40"></a>
+          <a href="http://spotify.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/spotify_logo.jpg" hspace="15" width="185" height="71"></a>
+          <a href="http://amazon.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/amazon_logo.png" hspace="15" width="185" height="49"></a>
+          <a href="http://netflix.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/netflix_logo.png" hspace="15" width="185" height="56"></a>
+          <a href="http://rdio.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/rdio_logo.png" hspace="15" width="185" height="71"></a>
+          <a href="http://tunein.com/" target="blank"><img style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%)" src="/static/img/tunein_logo.png" hspace="15" width="185" height="71"></a>
         </div>
       </div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart-empty"></span>&nbsp;2014&#150;{{year}}, <a href="http://www.facebook.com/alardus">Alexander Bykov</a><span style="float: right" class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter" data-yashareTheme="counter"></span></p>
+        <p>
+	      <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;2014&#150;{{year}}, <a href="http://www.facebook.com/alardus">Alexander Bykov</a><span style="float: right" class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter" data-yashareTheme="counter">
+	      </span>  
+	    </p>
       </div>
     </div> <!-- /container -->
 
-<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24248731 = new Ya.Metrika({id:24248731, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24248731" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24248731 = new Ya.Metrika({id:24248731, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24248731" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
   </body>
-
   <div align="center" id="myModal" class="reveal-modal large">
     <h3>Форма для Яндекс.Денег</h3>
     <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/donate.xml?account=4100130212557&quickpay=donate&payment-type-choice=on&default-sum=100&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C+Portaller&target-visibility=on&project-name=portaller.com&project-site=http%3A%2F%2Fportaller.com&button-text=05" width="508" height="131"></iframe>
   </div>
-
 </html>
