@@ -28,13 +28,14 @@ def index():
 	check = os.path.isfile(snipid)
 	sni = ''
 	if check == True:
-		with open(snipid, 'r') as file:
-			sni = file.readline()
+		with open(snipid, 'r') as fl:
+			sni = fl.readline()
 	else:
 		sni = 'proxy dead'
 
 	la = os.popen("uptime | awk -F'[a-z]:' '{ print $2}'").read()
 
-	connections = os.popen("netstat -atW | grep EST | awk {'print $5'} | cut -d : -f 1 | sort | uniq | grep -v pandora | grep -v spotify | grep -v amazon | grep -v netflix | grep -v rdio | grep -v portaller | wc -l").read().rstrip()
+	with open("./connections.txt", 'r') as fl:
+		connections = fl.readline()
 
 	return template('status', dict(error = None, year = copyright, sni = sni, la = la, connections = connections))
