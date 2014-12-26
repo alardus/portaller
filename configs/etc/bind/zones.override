@@ -1,9 +1,19 @@
-zone "pandora.com." {
+zone "www.pandora.com." {
     type master;
     file "/etc/bind/db.override";
 };
 
-zone "spotify.com." {
+zone "tuner.pandora.com." {
+    type master;
+    file "/etc/bind/db.tuner.pandora";
+};
+
+zone "www.spotify.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "lon3-weblb-a2.lon3.spotify.com." {
     type master;
     file "/etc/bind/db.override";
 };
@@ -28,7 +38,7 @@ zone "netflix.com." {
     file "/etc/bind/db.override";
 };
 
-zone "rdio.com." {
+zone "www.rdio.com." {
     type master;
     file "/etc/bind/db.override";
 };
