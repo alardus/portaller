@@ -21,13 +21,13 @@
   <body>
     <div class="container">
       <div class="header">
-	      
-	    <!-- Menu -->
+        
+      <!-- Menu -->
         <ul class="nav nav-pills pull-right">
           <li>
             <p>
-	          <a href="#" class="btn btn-default">Setup Instructions</a>
-	          <a href="#" data-reveal-id="myModal" data-reveal class="btn btn-success">Яндекс.Деньги</a>
+            <a href="#" class="btn btn-default">Setup Instructions</a>
+            <a href="#" data-reveal-id="myModal" data-reveal class="btn btn-success">Яндекс.Деньги</a>
               <a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DP99B5UCEK2MC" role="button" target="blank">PayPal</a>
             </p>
           </li>
@@ -36,10 +36,10 @@
         <a href="http://portaller.com"><h3 class="text-muted">Portaller</h3></a>
       </div>
 
-	<div class="row">
-  	  <div class="col-md-3" id="leftCol">              
-	    <div class="well"> 
-		  <p>Devices</p>
+  <div class="row">
+      <div class="col-md-3" id="leftCol">              
+      <div class="well"> 
+      <p>Devices</p>
             <ul class="nav nav-stacked" id="sidebar">
               <li><a href="#sec1">Windows 7</a></li>
               <li><a href="#sec2">Mac OS X</a></li>
@@ -53,36 +53,93 @@
               <li><a href="#sec7">Home Router <small>(Asus, Zyxel, etc.)</small></a></li>
               <li><a href="#sec8">DNSmasq</a></li>
             </ul>
-  		</div>
+      </div>
       </div>  
       
       <div class="col-md-9">
         <h2 id="sec0">How to setup</h2>
         <p>That is two ways of how to use Portaller. If you want to unblock content only for one device (e.g. iPhone or SmartTV) &mdash; find that device in the list at left sidebar and set it up as described.
 
-		<p>But if you want to use it on many devices inside your home network at the same time (e.g. listen Pandora on iPhone and watch Netflix on TV) &mdash; best way is write Portaller DNS address to the settings of your router. It will push right DNS settings to any devices connected to it.</p>
-              	
-      <div class="bs-callout bs-callout-danger">
-	    <h4>Android not supported</h4>
-		<p>Due some limitations in Android TLS implementation, Portaller not support any of Android devices at this time ;(</p> 
+    <p>But if you want to use it on many devices inside your home network at the same time (e.g. listen Pandora on iPhone and watch Netflix on TV) &mdash; best way is write Portaller DNS address to the settings of your router. It will push right DNS settings to any devices connected to it.</p>
+                
+<!--       <div class="bs-callout bs-callout-danger">
+      <h4>Android not supported</h4>
+    <p>Due some limitations in Android TLS implementation, Portaller not support any of Android devices at this time ;(</p> 
         <p>Sorry about that.</p>
-	  </div>
-              	
-      <br><hr>            	        
+    </div> -->
+
+      <h2 id="sec0">Which services are supported</h2>
+      <p>Every device can use it's own version of software to communicate with services. All devices under modern OS must work correct, but you need to check that you use latest version of client for Pandora, Spotify or Netflix.
+      </p>
+      <p>
+      Versions of OS that I used for testing &mdash; Windows 7, iOS 8, Android 4.4. Clients &mdash; Chrome 39, Pandora 5.4, Spotify 1.9, Netflix 3.9, Amazon Video 5.2. 
+      </p>
+      <table class="table table-striped">
+        <tr>
+          <td><b></b></td>
+          <td><b>Browser</b></td>
+          <td><b>SmartTV</b></td>
+          <td><b>Desktop</b></td>
+          <td><b>iOS</b></td>
+          <td><b>Android</b></td>
+        </tr>
+        <tr>
+          <td><b>Pandora</b></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+        </tr>
+        <tr>
+          <td><b>Spotify</b></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+        </tr>
+        <tr>
+          <td><b>Rdio</b></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td></td>
+          <td></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+        </tr>
+        <tr>
+          <td><b>Netflix</b></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+        </tr>
+        <tr>
+          <td><b>Amazon Video</b></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+        </tr>
+      </table>
+                
+      <br><hr>                      
       <h2 id="sec1">Windows 7</h2>
         <li> Click to the "Network" icon at status bar and open "Network center";</li>
         <li> Select current active connection;</li>
         <li> Click "Options" at the window appeared;</li>
         <li> Select "IPv4" row and choose "Options";</li>
         <li> Put "107.170.15.247" as primary DNS and "77.88.8.8" as secondary in the "Preferred DNS" section.</li><br>
-              	
+                
         <div class="row">  
-          <div class="col-md-4"><a href="http://portaller.com/static/img/2.png" target="_blank"><img src="http://portaller.com/static/img/2.png" class="img-responsive"></a></div>               	
-          <div class="col-md-4"><a href="http://portaller.com/static/img/3.png" target="_blank"><img src="http://portaller.com/static/img/3.png" class="img-responsive"></a></div>                  	
-          <div class="col-md-4"><a href="http://portaller.com/static/img/4.png" target="_blank"><img src="http://portaller.com/static/img/4.png" class="img-responsive"></a></div>                  	
+          <div class="col-md-4"><a href="http://portaller.com/static/img/2.png" target="_blank"><img src="http://portaller.com/static/img/2.png" class="img-responsive"></a></div>                
+          <div class="col-md-4"><a href="http://portaller.com/static/img/3.png" target="_blank"><img src="http://portaller.com/static/img/3.png" class="img-responsive"></a></div>                    
+          <div class="col-md-4"><a href="http://portaller.com/static/img/4.png" target="_blank"><img src="http://portaller.com/static/img/4.png" class="img-responsive"></a></div>                    
           <div class="col-md-4"><a href="http://portaller.com/static/img/5.png" target="_blank"><img src="http://portaller.com/static/img/5.png" class="img-responsive"></a></div>
         </div>
-              	              
+                              
       <br><hr>              
       <h2 id="sec2">Mac OS X</h2>
         <li> Open "Network" section;</li>
@@ -96,7 +153,7 @@
           <div class="col-md-4"><a href="http://portaller.com/static/img/mac3.png" target="_blank"><img src="http://portaller.com/static/img/mac3.png" class="img-responsive"></a></div>
           <div class="col-md-4"><a href="http://portaller.com/static/img/mac4.png" target="_blank"><img src="http://portaller.com/static/img/mac4.png" class="img-responsive"></a></div>
         </div>
-              		              
+                                
       <br><hr>             
       <h2 id="sec3">PlayStation 4</h2>
         <li> Navigate to the settings menu ​and select "Network";</li>
@@ -124,11 +181,11 @@
         <p><h5><b>Changing SmartTV region</b></h5></p>
         <p>When TV run for the first time, it's contains few applications allowed for your country. Many presets of apps for local markets not include Netflix, Pandora and other apps popular in USA, so if you want to use them — you need to swith SmartTV region of your TV on United States.</p><br>                
         <p><b>For older model with original remote</b> &mdash; click on the "Smart Button" on remote and when you see the Smart Hub &mdash; press <span class="glyphicon glyphicon-forward"></span>, 2, 8, 9, <span class="glyphicon glyphicon-backward"></span>.</p><br>                
-        <p><b>For new F/H series launched in 2013/2014</b> &mdash; enter to settings menu and navigate to "Support > Self Diagnosis > Reset". Make a reset (your previous information will be available) and stop the setup when you come to the Smart Hub Terms & Conditions, Privacy Policy page. Press the following sequence on your remote:</p><br>              	
+        <p><b>For new F/H series launched in 2013/2014</b> &mdash; enter to settings menu and navigate to "Support > Self Diagnosis > Reset". Make a reset (your previous information will be available) and stop the setup when you come to the Smart Hub Terms & Conditions, Privacy Policy page. Press the following sequence on your remote:</p><br>                
         <p><img src="/static/img/f-series-samsung-change-region-guide.jpg"></p>                
-        <br><p>The internet service location will appear. If you wish to view US apps (Vudu, Hulu plus etc) select "United States". Note that you cannot select 2 regions, i.e you can't have access to Netflix (US) and IVI (RU) at the same time. You must repeat the smart hub steps every time you want to change.</p>              	
-        <p>When the Smart Hub has restarted it will now be set to your chosen region and download the default apps for your new region.</p>             	
-	    <br><p><h5><b>Setup DNS address</b></h5></p>
+        <br><p>The internet service location will appear. If you wish to view US apps (Vudu, Hulu plus etc) select "United States". Note that you cannot select 2 regions, i.e you can't have access to Netflix (US) and IVI (RU) at the same time. You must repeat the smart hub steps every time you want to change.</p>                
+        <p>When the Smart Hub has restarted it will now be set to your chosen region and download the default apps for your new region.</p>               
+      <br><p><h5><b>Setup DNS address</b></h5></p>
         <li> Press "Menu" button on remote, scroll down to "Network" and chose "Network Settings";</li>
         <li> Select type of your internet connection and then select "IP Settings";</li>
         <li> Scroll down to DNS settings and put "107.170.15.247" as primary DNS and "77.88.8.8" as secondary;</li>
@@ -138,9 +195,9 @@
       <h2 id="sec6">iPhone</h2>
         <p>
         <li> Launch "Settings" and click on Wi-Fi;</li>
-		<li> Click on the network you are currently connected;</li>
-		<li> Click on the DNS field;</li>
-		<li> Fill DNS separated by comma: "107.170.15.247, 77.88.8.8".</li>
+    <li> Click on the network you are currently connected;</li>
+    <li> Click on the DNS field;</li>
+    <li> Fill DNS separated by comma: "107.170.15.247, 77.88.8.8".</li>
         </p>                
         <div class="row">
           <div class="col-md-4"><a href="/static/img/iphone1.png" target="_blank"><img src="/static/img/iphone1.png" class="img-responsive"></a></div>
@@ -156,7 +213,7 @@
       <h2 id="sec8">DNSmasq</h2>
         <p>If you use local DNS server, like DNSmasq, you can allow to enable custom DNS settings on particular domains. Add host that you want unlock to dnsmasq configuration file and restart service:</p>               
         <p><pre>$ nano /etc/dnsmasq.conf</pre></p>                
-        <p><pre>server=/netflix.com/107.170.15.247<br>server=/pandora.com/107.170.15.247<br>...</pre></p>				
+        <p><pre>server=/netflix.com/107.170.15.247<br>server=/pandora.com/107.170.15.247<br>...</pre></p>       
         <p><pre>$ service dnsmasq restart</pre></p>
                 
       <br><br>
