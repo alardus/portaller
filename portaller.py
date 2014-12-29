@@ -24,14 +24,13 @@ def index():
 
 @app.route('/status')
 def index():
-	snipid = '/var/tmp/sniproxy.pid'
-	check = os.path.isfile(snipid)
 	sni = ''
+	check = os.path.isfile('/var/tmp/sniproxy.pid')
 	if check == True:
-		with open(snipid, 'r') as fl:
+		with open('/var/tmp/sniproxy.pid', 'r') as fl:
 			sni = fl.readline()
 	else:
-		sni = 'proxy dead'
+		sni = 'sniproxy is dead'
 
 	la = os.popen("uptime | awk -F'[a-z]:' '{ print $2}'").read()
 
