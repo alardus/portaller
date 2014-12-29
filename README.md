@@ -1,4 +1,4 @@
 portaller
 =========
 
-DNS proxy for geo-locked services
+Sources of http://portaller.com &mdash; DNS proxy for geo-locked services.
