@@ -53,6 +53,7 @@
             <ul class="nav nav-stacked" id="sidebar">
               <li><a href="#sec7">Home Router <small>(Asus, Zyxel, etc.)</small></a></li>
               <li><a href="#sec8">DNSmasq</a></li>
+              <li><a href="#sec9">Mikrotik</a></li>
             </ul>
       </div>
       </div>  
@@ -233,6 +234,13 @@
         <p><pre>server=/netflix.com/107.170.15.247<br>server=/pandora.com/107.170.15.247<br>...</pre></p>       
         <p><pre>$ service dnsmasq restart</pre></p>
                 
+      <br><hr>             
+      <h2 id="sec9">Mikrotik</h2>
+        <p>If you use Mikrotik as a router, you can set it up to use Portaller DNS only for specified domains. To do this create a few rules for every domain (for Pandora as example):</p>
+        <p><pre>/ip firewall layer7-protocol add name=pandora.com regexp=pandora.com</pre></p> 
+        <p><pre>/ip firewall mangle add action=mark-connection chain=prerouting dst-address=192.168.88.1 dst-port=53 layer7-protocol=pandora.com new-connection-mark=forwarded-dns protocol=udp</pre></p> 
+        <p><pre>/ip firewall nat add action=dst-nat chain=dstnat comment="portaller.com dns proxy" connection-mark=forwarded-dns to-addresses=107.170.15.247</pre></p>    
+        <p>Where <b>192.168.88.1</b> Mikrotik IP, and <b>107.170.15.247</b> Portaller IP.</p>           
       <br><br>
                 
       </div> <!-- col-md-9 -->
