@@ -1,4 +1,4 @@
-import bottle, os
+import bottle, os, urllib2
 from bottle import template, static_file
 
 app = application = bottle.Bottle()
@@ -24,17 +24,28 @@ def index():
 
 @app.route('/status')
 def index():
-	sni = ''
-	check = os.path.isfile('/var/tmp/sniproxy.pid')
-	if check == True:
-		with open('/var/tmp/sniproxy.pid', 'r') as fl:
-			sni = fl.readline()
-	else:
-		sni = 'sniproxy is dead'
-
-	la = os.popen("uptime | awk -F'[a-z]:' '{ print $2}'").read()
-
-	with open("./connections.txt", 'r') as fl:
-		connections = fl.readline()
-
-	return template('status', dict(error = None, year = copyright, sni = sni, la = la, connections = connections))
+	try:
+		data = urllib2.urlopen('http://portaller.com/connections.txt').readlines()
+		try:
+			if data[2].strip() != '': 									#loading SNI
+				status, text = ('is-visible', 'Open')
+			else:
+				status, text = ('is-hidden', 'Closed')
+		except:
+			status, text = ('is-hidden', 'Closed')		
+		
+		try:
+			if data[1].strip() != '': la = data[1].strip() 				#loading LA
+			else: ls = 'not available'
+		except: ls = 'not available'
+	
+		try:
+			if data[0].strip() != '': connections = data[0].strip()		#loading connections 
+			else: connections = 'not available'
+		except: connections = 'not available'
+	
+	except: 
+		status, text = ('is-hidden', 'Closed')
+		la = connections = 'not available'
+	
+	return template('status', dict(error = None, year = copyright, la = la, connections = connections, status = status, text = text))

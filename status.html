@@ -9,29 +9,71 @@
 
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/static/css/docs.min.css" rel="stylesheet">
   </head>
 
   <body>
     <div class="container">
       <div class="header">
-        <a href="http://portaller.com"><h3 class="text-muted">Portaller</h3></a>
+        <a href="http://portaller.com"><h3 class="text-muted">Portaller Status</h3></a>
       </div>
 
       <div class="row marketing">
-	    <table class="table table-striped">
-		  <tr>
-			<td><b>Connections</b></td>
-			<td><b>PID</b></td>
-			<td><b>LA</b></td>
-			<td><b>Traffic</b></td>
-		  </tr>
-		  <tr>
-			<td>{{connections}}</td>
-			<td>{{sni}}</td>
-			<td>{{la}}</td>
-			<td><a href="/static/mrtg/127.0.0.1_eth0.html"><img src="/static/mrtg/127.0.0.1_eth0-day.png" width="100" height="27"></a></td>
-		  </tr>
-		</table>
+      		<table class="table table-bordered">
+		      <tbody>
+			    <tr>
+			      <td>Primary IP</td>
+		          <td>107.170.15.247</td>
+		        </tr>
+				<tr>
+		          <td>Connections</td>
+		          <td>{{connections}}</td>
+		        </tr>
+				<tr>
+		          <td>Load Average</td>
+		          <td>{{la}}</td>
+		        </tr>
+		        <tr>
+		          <td>Traffic (frontend)</td>
+		          <td><a href="/static/mrtg/127.0.0.1_eth0.html"><img src="/static/mrtg/127.0.0.1_eth0-day.png" width="100" height="27"></a></td>
+		        </tr>
+		        <tr>
+		          <td>Traffic (backend)</td>
+		          <td></td>
+		        </tr>
+		      </tbody>
+      		</table>
+      		
+      		<table class="table table-bordered table-striped responsive-utilities">
+		      <thead>
+		        <tr>
+		          <th>Portal</th>
+		          <th>Status</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <th scope="row">Pandora</th>
+		          <td class="{{status}}">{{text}}</td>
+		        </tr>
+		        <tr>
+		          <th scope="row">Spotify</th>
+		          <td class="{{status}}">{{text}}</td>
+		        </tr>
+		        <tr>
+		          <th scope="row">Rdio</th>
+		          <td class="{{status}}">{{text}}</td>
+		        </tr>
+				<tr>
+		          <th scope="row">Netflix</th>
+		          <td class="{{status}}">{{text}}</td>
+		        </tr>
+		        <tr>
+		          <th scope="row">Amazon Video</th>
+		          <td class="{{status}}">{{text}}</td>
+		        </tr>
+		      </tbody>
+		    </table>
       </div>
 
     </div> <!-- /container -->
