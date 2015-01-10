@@ -21,6 +21,10 @@ def index():
 @app.route('/setup')
 def index():
 	return template('setup', dict(error = None, year = copyright))
+	
+@app.route('/setup/vpn')
+def index():
+	return template('vpn', dict(error = None, year = copyright))
 
 @app.route('/status')
 def index():
