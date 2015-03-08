@@ -48,12 +48,13 @@ body {
 }
 .jumbotron .btn {
   padding: 14px 24px;
-  font-size: 21px;
+  font-size: 14px;
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+  margin: 20px;
+  margin-bottom: 20px;
 }
 .marketing p + h4 {
   margin-top: 28px;
