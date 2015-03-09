@@ -20,7 +20,7 @@ I='/usr/sbin/iptables'
 IP='/usr/sbin/ip'
 
 # Mode of operation (add / remove)
-IPT_ACTION="A"
+IPT_ACTION="I"
 IP_ACTION="add"
 
 [ "x${1}" == "x--delete" ] && \
