@@ -38,20 +38,20 @@ zone "netflix.com." {
     file "/etc/bind/db.override";
 };
 
-#zone "uiboot.netflix.com." {
-#    type master;
-#    file "/etc/bind/uiboot.netflix.com";
-#};
+zone "uiboot.netflix.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
 
-#zone "secure.netflix.com." {
-#    type master;
-#    file "/etc/bind/secure.netflix.com";
-#};
+zone "secure.netflix.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
 
-#zone "api-global.netflix.com." {
-#    type master;
-#    file "/etc/bind/api-global.netflix.com";
-#};
+zone "api-global.netflix.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
 
 zone "www.rdio.com." {
     type master;
