@@ -260,7 +260,22 @@
           <h4 id="dnsmasq">DNSmasq</h4>
             <p>If you use local DNS server, like DNSmasq, you can allow to enable custom DNS settings on particular domains. Add host that you want unlock to dnsmasq configuration file and restart service:</p>               
             <p><pre>$ nano /etc/dnsmasq.conf</pre></p>                
-            <p><pre>server=/netflix.com/107.170.15.247<br>server=/pandora.com/107.170.15.247<br>...</pre></p>       
+            <p><pre>server=/pandora.com/107.170.15.247<br>
+server=/tuner.pandora.com/104.131.201.115<br>
+server=/www.spotify.com/107.170.15.247<br>
+server=/lon3-weblb-a2.lon3.spotify.com/107.170.15.247<br>
+server=/ip2location.com/107.170.15.247<br>
+server=/atv-ext.amazon.com/107.170.15.247<br>
+server=/atv-ps.amazon.com/107.170.15.247<br>
+server=/netflix.com/107.170.15.247<br>
+server=/uiboot.netflix.com/107.170.15.247<br>
+server=/secure.netflix.com/107.170.15.247<br>
+server=/api-global.netflix.com/107.170.15.247<br>
+server=/www.rdio.com/107.170.15.247<br>
+server=/tunein.com/107.170.15.247<br>
+server=/radio.com/107.170.15.247<br>
+server=/streamtheworld.com/107.170.15.247
+			</pre></p>       
             <p><pre>$ service dnsmasq restart</pre></p>
                     
           <br><hr>             
