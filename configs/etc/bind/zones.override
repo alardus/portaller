@@ -53,6 +53,11 @@ zone "api-global.netflix.com." {
     file "/etc/bind/db.override";
 };
 
+zone "nrdp.nccp.netflix.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 zone "www.rdio.com." {
     type master;
     file "/etc/bind/db.override";
