@@ -27,7 +27,7 @@ IP_ACTION="add"
 	IPT_ACTION="D" && \
 	IP_ACTION="del"
 
-HOSTS="api-global.netflix.com uiboot.netflix.com secure.netflix.com"
+HOSTS="api-global.netflix.com uiboot.netflix.com secure.netflix.com nrdp.nccp.netflix.com"
 
 for ID in `seq 1 3`; do
 	#echo "Setting up pseudo-address ${sADDR}${ID} on ${inIF}"
