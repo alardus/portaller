@@ -7,7 +7,7 @@ extIF='eth0.2'
 
 # Pseudo-addresses to catch non-SNI request and redirect them to upstream proxy
 # The IP-s are added to local interface
-sADDR='192.168.44.3' # 301 302 303
+sADDR='192.168.44.3' # 301 302 303 304
 sADDR_MASK='29'
 # IP-address of upstream proxy (must be inside the US)
 dADDR='107.170.15.247' # portaller.com
@@ -29,7 +29,7 @@ IP_ACTION="add"
 
 HOSTS="api-global.netflix.com uiboot.netflix.com secure.netflix.com nrdp.nccp.netflix.com"
 
-for ID in `seq 1 3`; do
+for ID in `seq 1 4`; do
 	#echo "Setting up pseudo-address ${sADDR}${ID} on ${inIF}"
 	$IP addr ${IP_ACTION} ${sADDR}${ID}/${sADDR_MASK} dev ${inIF} > /dev/null 2>&1
 
