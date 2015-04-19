@@ -26,6 +26,10 @@ def index():
 def index():
 	return template('vpn', dict(error = None, year = copyright))
 
+@app.route('/geoCheck')
+def index():
+        return template('geoCheck.xml', dict(error = None, year = copyright))
+
 @app.route('/status')
 def index():
 	try:
