@@ -88,7 +88,53 @@ zone "go.com." {
     file "/etc/bind/db.override";
 };
 
+zone "abc.go.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 zone "hulu.com." {
     type master;
     file "/etc/bind/db.override";
 };
+
+zone "s.hulu.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "play.hulu.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "releasegeo.hulu.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "releasegeo.hulu.com.edgesuite.net." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "a1123.b.akamai.net." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+#zone "akamaitechnologies.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+
+#zone "akamaiedge.net." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+
+#zone "akamai.net." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+
