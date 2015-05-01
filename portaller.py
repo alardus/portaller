@@ -8,6 +8,10 @@ copyright = '2015'
 def server_static(filepath):
     return static_file(filepath, root='static')
 
+@app.route('/app/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root='app')
+
 @app.route('/')
 def index():
 	return template('index', dict(error = None, year = copyright))
