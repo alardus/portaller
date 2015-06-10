@@ -138,17 +138,22 @@ zone "a1123.b.akamai.net." {
 #    file "/etc/bind/db.override";
 #};
 
-zone "hbo.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
 zone "hbogo.com." {
     type master;
     file "/etc/bind/db.override";
 };
 
+zone "hbo.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 zone "hbonow.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "costco.com." {
     type master;
     file "/etc/bind/db.override";
 };
