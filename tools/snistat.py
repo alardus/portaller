@@ -1,5 +1,13 @@
 import getopt, sys, os
 
+pandora_out = 'pandora.data'
+spotify_out = 'spotify.data'
+rdio_out = 'rdio.data'
+netflix_out = 'netflix.data'
+amazon_out = 'amazon.data'
+hbo_out = 'hbo.data'
+overall = 'snistat.data'
+
 date = os.popen("date +%Y-%m-%d").read().strip()
 
 def main():
@@ -70,4 +78,31 @@ for i in seen:
         hbo += 1
 
 # print "Date "+date+'\n', "pandora ", pandora, "spotify ", spotify, "rdio ", rdio, "netflix ", netflix, "amazon ", amazon, "hbo ", hbo
-print pandora+spotify+rdio+netflix+amazon+hbo
+
+with open(pandora_out, 'a+') as fl:
+    fl.write(str(pandora))
+    fl.write('\n')
+
+with open(spotify_out, 'a+') as fl:
+    fl.write(str(spotify))
+    fl.write('\n')
+
+with open(rdio_out, 'a+') as fl:
+    fl.write(str(rdio))
+    fl.write('\n')
+
+with open(netflix_out, 'a+') as fl:
+    fl.write(str(netflix))
+    fl.write('\n')
+
+with open(amazon_out, 'a+') as fl:
+    fl.write(str(amazon))
+    fl.write('\n')
+
+with open(hbo_out, 'a+') as fl:
+    fl.write(str(hbo))
+    fl.write('\n')
+
+with open(overall, 'a+') as fl:
+    fl.write(str(pandora+spotify+rdio+netflix+amazon+hbo))
+    fl.write('\n')
