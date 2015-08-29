@@ -14,6 +14,7 @@ include "/etc/bind/rndc.key";
 //};
 
 include "/etc/bind/zones.override";
+include "/etc/bind/spywaredomains.zones";
 
 logging {
     channel bind_log {
@@ -23,20 +24,22 @@ logging {
         print-severity yes;
         print-category yes;
     };
+    category default { bind_log; };
+    category queries { bind_log; };
 
     channel query-error_log {
-        file "/var/log/named/query-error.log" versions 7 size 100M; print-category yes;
-        print-severity yes;
-        print-time yes;
-        severity info;
-    };
+	file "/var/log/named/query-error.log" versions 7 size 100M;
+	print-severity yes;
+	print-time yes;
+	severity info;
+};
+    category query-errors { query-error_log; };
 
     channel security_file {
-        file "/var/log/named/security.log" versions 3 size 5m;
+        file "/var/log/named/security.log" versions 3 size 30m;
         severity dynamic;
         print-time yes;
     };
-
     category default { bind_log; };
     category queries { bind_log; };
     category query-errors { query-error_log; };

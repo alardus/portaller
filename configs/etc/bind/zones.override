@@ -13,6 +13,11 @@ zone "www.spotify.com." {
     file "/etc/bind/db.override";
 };
 
+zone "play.spotify.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 zone "lon3-weblb-a2.lon3.spotify.com." {
     type master;
     file "/etc/bind/db.override";
@@ -153,7 +158,3 @@ zone "hbonow.com." {
     file "/etc/bind/db.override";
 };
 
-zone "costco.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
