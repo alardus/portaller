@@ -1,8 +1,9 @@
 import bottle, os, urllib2
 from bottle import template, static_file
+from datetime import date
 
 app = application = bottle.Bottle()
-copyright = '2015'
+copyright = date.today().year
 
 @app.route('/static/<filepath:path>')
 def server_static(filepath):
@@ -25,7 +26,7 @@ def index():
 @app.route('/setup')
 def index():
 	return template('setup', dict(error = None, year = copyright))
-	
+
 # @app.route('/setup/vpn')
 # def index():
 # 	return template('vpn', dict(error = None, year = copyright))
@@ -44,20 +45,20 @@ def index():
 			else:
 				status, text = ('is-hidden', 'Closed')
 		except:
-			status, text = ('is-hidden', 'Closed')		
-		
+			status, text = ('is-hidden', 'Closed')
+
 		try:
 			if data[1].strip() != '': la = data[1].strip() 				#loading LA
 			else: ls = 'not available'
 		except: ls = 'not available'
-	
+
 		try:
-			if data[0].strip() != '': connections = data[0].strip()		#loading connections 
+			if data[0].strip() != '': connections = data[0].strip()		#loading connections
 			else: connections = 'not available'
 		except: connections = 'not available'
-	
-	except: 
+
+	except:
 		status, text = ('is-hidden', 'Closed')
 		la = connections = 'not available'
-	
+
 	return template('status', dict(error = None, year = copyright, la = la, connections = connections, status = status, text = text))
