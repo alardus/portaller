@@ -38,7 +38,7 @@ def index():
 @app.route('/status')
 def index():
 	try:
-		data = urllib2.urlopen('http://portaller.com/connections.txt').readlines()
+		data = open('/var/www/portaller/connections.txt','r').readlines()
 		try:
 			if data[2].strip() != '': 									#loading SNI
 				status, text = ('is-visible', 'Open')
