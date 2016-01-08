@@ -19,6 +19,8 @@
   </head>
 
   <body>
+	  
+  <div id="out"></div>
 
 <!--
     <div class="alert-warning">
@@ -93,6 +95,12 @@
         </p>
       </div>
     </div> <!-- /container -->
+    
+    <script>
+		var is_Mac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+		var out = document.getElementById('out');
+		if (is_Mac) out.innerHTML += "<div class='alert-warning'><p>Hey, do you use Mac? Try out <a href='https://github.com/alardus/radiotower/releases'>RadioTower</a> &mdash; our small app to easily enable/disable Portaller.</p></div>";
+    </script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24248731 = new Ya.Metrika({id:24248731, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24248731" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
