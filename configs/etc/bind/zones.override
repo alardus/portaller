@@ -63,11 +63,6 @@ zone "nrdp.nccp.netflix.com." {
     file "/etc/bind/db.override";
 };
 
-zone "www.rdio.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
 zone "tunein.com." {
     type master;
     file "/etc/bind/db.override";
@@ -157,4 +152,3 @@ zone "hbonow.com." {
     type master;
     file "/etc/bind/db.override";
 };
-

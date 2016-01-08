@@ -2,7 +2,6 @@ import getopt, sys, os
 
 pandora_out = 'pandora.data'
 spotify_out = 'spotify.data'
-rdio_out = 'rdio.data'
 netflix_out = 'netflix.data'
 amazon_out = 'amazon.data'
 hbo_out = 'hbo.data'
@@ -36,12 +35,11 @@ if __name__ == "__main__":
 # How many people use services?
 # p = os.popen("cat /var/log/sniproxy.log | grep " + date + "| grep pandora | awk '{print $3}' | cut -d : -f 1 | sort | uniq | wc -l").read()
 # s = os.popen("cat /var/log/sniproxy.log | grep " + date + "| grep spotify | awk '{print $3}' | cut -d : -f 1 | sort |uniq | wc -l").read()
-# r = os.popen("cat /var/log/sniproxy.log | grep " + date + "| grep rdio | awk '{print $3}' | cut -d : -f 1 | sort | uniq | wc -l").read()
 # n = os.popen("cat /var/log/sniproxy.log | grep " + date + "| grep netflix | awk '{print $3}' | cut -d : -f 1 | sort | uniq | wc -l").read()
 # a = os.popen("cat /var/log/sniproxy.log | grep " + date + "| grep amazon | awk '{print $3}' | cut -d : -f 1 | sort | uniq | wc -l").read()
 # h = os.popen("cat /var/log/sniproxy.log | grep " + date + "| grep hbo | awk '{print $3}' | cut -d : -f 1 | sort | uniq | wc -l").read()
 
-# print "Date "+date+'\n', "pandora "+p, "spotify "+s, "rdio "+r, "netflix "+n, "amazon "+a, "hbo "+h
+# print "Date "+date+'\n', "pandora "+p, "spotify "+s, "netflix "+n, "amazon "+a, "hbo "+h
 # print int(p)+int(s)+int(r)+int(n)+int(a)+int(h)
 
 
@@ -58,7 +56,6 @@ for i in log:
 
 pandora = 0
 spotify = 0
-rdio = 0
 netflix = 0
 amazon = 0
 hbo = 0
@@ -68,8 +65,6 @@ for i in seen:
         pandora += 1
     elif 'spotify' in i:
         spotify += 1
-    elif 'rdio' in i:
-        rdio += 1
     elif 'netflix' in i:
         netflix += 1
     elif 'amazon' in i:
@@ -77,7 +72,7 @@ for i in seen:
     elif 'hbo' in i:
         hbo += 1
 
-# print "Date "+date+'\n', "pandora ", pandora, "spotify ", spotify, "rdio ", rdio, "netflix ", netflix, "amazon ", amazon, "hbo ", hbo
+# print "Date "+date+'\n', "pandora ", pandora, "spotify ", spotify, "netflix ", netflix, "amazon ", amazon, "hbo ", hbo
 
 with open(pandora_out, 'a+') as fl:
     fl.write(str(pandora))
@@ -85,10 +80,6 @@ with open(pandora_out, 'a+') as fl:
 
 with open(spotify_out, 'a+') as fl:
     fl.write(str(spotify))
-    fl.write('\n')
-
-with open(rdio_out, 'a+') as fl:
-    fl.write(str(rdio))
     fl.write('\n')
 
 with open(netflix_out, 'a+') as fl:
@@ -104,5 +95,5 @@ with open(hbo_out, 'a+') as fl:
     fl.write('\n')
 
 with open(overall, 'a+') as fl:
-    fl.write(str(pandora+spotify+rdio+netflix+amazon+hbo))
+    fl.write(str(pandora+spotify+netflix+amazon+hbo))
     fl.write('\n')
