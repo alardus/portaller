@@ -18,6 +18,16 @@ zone "play.spotify.com." {
     file "/etc/bind/db.override";
 };
 
+zone "apresolve.spotify.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "weblb-wg.gslb.spotify.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 zone "lon3-weblb-a2.lon3.spotify.com." {
     type master;
     file "/etc/bind/db.override";
@@ -37,6 +47,11 @@ zone "atv-ps.amazon.com." {
     type master;
     file "/etc/bind/db.override";
 };
+
+#zone "compute.amazonaws.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
 
 zone "netflix.com." {
     type master;
@@ -149,6 +164,81 @@ zone "hbo.com." {
 };
 
 zone "hbonow.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "costco.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "target.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "nordstrom.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "restorationhardware.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "nordstromimage.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "atwola.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "sling.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "movetv.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "movenetworks.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "fwmrm.net." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "aptime.movenetworks.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "webapp.movetv.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "p-ums.movetv.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "p-cmw.movetv.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "p-geo.movetv.com." {
     type master;
     file "/etc/bind/db.override";
 };
