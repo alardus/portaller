@@ -242,3 +242,8 @@ zone "p-geo.movetv.com." {
     type master;
     file "/etc/bind/db.override";
 };
+
+zone "rutracker.org." {
+    type master;
+    file "/etc/bind/db.override";
+};
