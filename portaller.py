@@ -22,6 +22,9 @@ def index():
 def index():
 	return template('beta', dict(error = None, year = copyright))
 
+@app.route('/donate')
+def index():
+	return template('donate', dict(error = None, year = copyright))
 
 @app.route('/setup')
 def index():
