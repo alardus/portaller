@@ -83,6 +83,11 @@ zone "ios.nccp.netflix.com." {
     file "/etc/bind/db.override";
 };
 
+zone "android.nccp.netflix.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 zone "tunein.com." {
     type master;
     file "/etc/bind/db.override";
