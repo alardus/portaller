@@ -1,3 +1,7 @@
+###
+# SERVICES
+###
+
 zone "pandora.com." {
     type master;
     file "/etc/bind/db.override";
@@ -47,11 +51,6 @@ zone "atv-ps.amazon.com." {
     type master;
     file "/etc/bind/db.override";
 };
-
-#zone "compute.amazonaws.com." {
-#    type master;
-#    file "/etc/bind/db.override";
-#};
 
 zone "www.netflix.com." {
     type master;
@@ -118,51 +117,6 @@ zone "abc.go.com." {
     file "/etc/bind/db.override";
 };
 
-zone "hulu.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "s.hulu.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "play.hulu.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "releasegeo.hulu.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "releasegeo.hulu.com.edgesuite.net." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "a1123.b.akamai.net." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-#zone "akamaitechnologies.com." {
-#    type master;
-#    file "/etc/bind/db.override";
-#};
-
-#zone "akamaiedge.net." {
-#    type master;
-#    file "/etc/bind/db.override";
-#};
-
-#zone "akamai.net." {
-#    type master;
-#    file "/etc/bind/db.override";
-#};
-
 zone "hbogo.com." {
     type master;
     file "/etc/bind/db.override";
@@ -177,6 +131,11 @@ zone "hbonow.com." {
     type master;
     file "/etc/bind/db.override";
 };
+
+
+###
+# SHOPS
+###
 
 zone "costco.com." {
     type master;
@@ -208,52 +167,107 @@ zone "atwola.com." {
     file "/etc/bind/db.override";
 };
 
-zone "sling.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
 
-zone "movetv.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "movenetworks.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "fwmrm.net." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "aptime.movenetworks.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "webapp.movetv.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "p-ums.movetv.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "p-cmw.movetv.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
-
-zone "p-geo.movetv.com." {
-    type master;
-    file "/etc/bind/db.override";
-};
+###
+# RKN
+###
 
 zone "rutracker.org." {
     type master;
     file "/etc/bind/db.override";
 };
+
+
+###
+# EXPERIMENTS
+###
+
+# Hulu
+#zone "hulu.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "s.hulu.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "play.hulu.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "releasegeo.hulu.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "releasegeo.hulu.com.edgesuite.net." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "a1123.b.akamai.net." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#zone "akamaitechnologies.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#zone "akamaiedge.net." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#zone "akamai.net." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+
+
+# Sling TV
+#zone "sling.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "movetv.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "movenetworks.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "fwmrm.net." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "aptime.movenetworks.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "webapp.movetv.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "p-ums.movetv.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "p-cmw.movetv.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
+#
+#zone "p-geo.movetv.com." {
+#    type master;
+#    file "/etc/bind/db.override";
+#};
