@@ -53,7 +53,7 @@ zone "atv-ps.amazon.com." {
 #    file "/etc/bind/db.override";
 #};
 
-zone "netflix.com." {
+zone "www.netflix.com." {
     type master;
     file "/etc/bind/db.override";
 };
@@ -74,6 +74,11 @@ zone "api-global.netflix.com." {
 };
 
 zone "nrdp.nccp.netflix.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "ios.nccp.netflix.com." {
     type master;
     file "/etc/bind/db.override";
 };
