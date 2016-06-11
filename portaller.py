@@ -9,6 +9,11 @@ copyright = date.today().year
 def server_static(filepath):
     return static_file(filepath, root='static')
 
+# Support for https://github.com/alardus/ninebot
+@app.route('/appversion/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root='/var/www/appversion')
+
 @app.route('/app/<filepath:path>')
 def server_static(filepath):
     return static_file(filepath, root='app')
@@ -37,6 +42,16 @@ def index():
 @app.route('/geoCheck')
 def index():
         return template('geoCheck.xml', dict(error = None, year = copyright))
+
+# Support for https://github.com/alardus/ninebot
+@app.route('/appversion/appdownload/NinebotMini/version.json')
+def index():
+        return template('/var/www/appversion/appdownload/NinebotMini/version.json', dict(error = None, year = copyright))
+
+# Support for https://github.com/alardus/ninebot
+@app.route('/appversion/appdownload/versioncode.json')
+def index():
+        return template('/var/www/appversion/appdownload/versioncode.json', dict(error = None, year = copyright))
 
 @app.route('/status')
 def index():

@@ -52,7 +52,7 @@ zone "atv-ps.amazon.com." {
     file "/etc/bind/db.override";
 };
 
-zone "www.netflix.com." {
+zone "netflix.com." {
     type master;
     file "/etc/bind/db.override";
 };
@@ -167,6 +167,10 @@ zone "atwola.com." {
     file "/etc/bind/db.override";
 };
 
+zone "bankunited.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
 
 ###
 # RKN
@@ -181,6 +185,12 @@ zone "rutracker.org." {
 ###
 # EXPERIMENTS
 ###
+
+# Ninebot
+zone "apptest.ninebot.cn." {
+    type master;
+    file "/etc/bind/db.override";
+};
 
 # Hulu
 #zone "hulu.com." {
