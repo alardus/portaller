@@ -52,7 +52,7 @@ zone "atv-ps.amazon.com." {
     file "/etc/bind/db.override";
 };
 
-zone "www.netflix.com." {
+zone "netflix.com." {
     type master;
     file "/etc/bind/db.override";
 };
@@ -167,12 +167,36 @@ zone "atwola.com." {
     file "/etc/bind/db.override";
 };
 
+zone "bankunited.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
 
 ###
 # RKN
 ###
 
 zone "rutracker.org." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "pornhub.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "beeg.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "youporn.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "xhamster.com." {
     type master;
     file "/etc/bind/db.override";
 };
