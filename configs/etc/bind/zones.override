@@ -52,6 +52,26 @@ zone "atv-ps.amazon.com." {
     file "/etc/bind/db.override";
 };
 
+zone "api.amazon.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "prime.amazon.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "na.api.amazonvideo.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "amazon.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 zone "netflix.com." {
     type master;
     file "/etc/bind/db.override";
