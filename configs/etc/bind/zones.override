@@ -72,6 +72,21 @@ zone "amazon.com." {
     file "/etc/bind/db.override";
 };
 
+zone "device-metrics-us.amazon.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "api.amazonvideo.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "mads.amazon-adsystem.com." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 zone "netflix.com." {
     type master;
     file "/etc/bind/db.override";
