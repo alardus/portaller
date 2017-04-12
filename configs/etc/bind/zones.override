@@ -89,37 +89,37 @@ zone "mads.amazon-adsystem.com." {
 
 zone "netflix.com." {
     type master;
-    file "/etc/bind/db.override";
+    file "/etc/bind/db.netflix.override";
 };
 
 zone "uiboot.netflix.com." {
     type master;
-    file "/etc/bind/db.override";
+    file "/etc/bind/db.netflix.override";
 };
 
 zone "secure.netflix.com." {
     type master;
-    file "/etc/bind/db.override";
+    file "/etc/bind/db.netflix.override";
 };
 
 zone "api-global.netflix.com." {
     type master;
-    file "/etc/bind/db.override";
+    file "/etc/bind/db.netflix.override";
 };
 
 zone "nrdp.nccp.netflix.com." {
     type master;
-    file "/etc/bind/db.override";
+    file "/etc/bind/db.netflix.override";
 };
 
 zone "ios.nccp.netflix.com." {
     type master;
-    file "/etc/bind/db.override";
+    file "/etc/bind/db.netflix.override";
 };
 
 zone "android.nccp.netflix.com." {
     type master;
-    file "/etc/bind/db.override";
+    file "/etc/bind/db.netflix.override";
 };
 
 zone "tunein.com." {
