@@ -256,6 +256,12 @@ zone "xhamster.com." {
 # EXPERIMENTS
 ###
 
+# Ninebot
+zone "apptest.ninebot.cn." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
 # Hulu
 #zone "hulu.com." {
 #    type master;
