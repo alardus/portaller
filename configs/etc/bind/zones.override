@@ -92,6 +92,21 @@ zone "netflix.com." {
     file "/etc/bind/db.netflix.override";
 };
 
+zone "nflxvideo.net." {
+    type master;
+    file "/etc/bind/db.netflix.override";
+};
+
+zone "DLCDNPortal.netflix.com." {
+    type master;
+    file "/etc/bind/db.netflix.override";
+};
+
+zone "ns1.p19.dynect.net." {
+    type master;
+    file "/etc/bind/db.netflix.override";
+};
+
 zone "uiboot.netflix.com." {
     type master;
     file "/etc/bind/db.netflix.override";
