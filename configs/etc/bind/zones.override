@@ -87,7 +87,7 @@ zone "mads.amazon-adsystem.com." {
     file "/etc/bind/db.override";
 };
 
-zone ".com." {
+zone "netflix.com." {
     type master;
     file "/etc/bind/db.override";
 };
