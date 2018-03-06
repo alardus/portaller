@@ -9,7 +9,8 @@ zone "pandora.com." {
 
 zone "tuner.pandora.com." {
     type master;
-    file "/etc/bind/db.override";
+#    file "/etc/bind/db.override";
+    file "/etc/bind/db.tuner.pandora";
 };
 
 zone "www.spotify.com." {
