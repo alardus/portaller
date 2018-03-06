@@ -16,6 +16,8 @@ defaults
   option abortonclose
   option http-server-close
   option persist
+  option forwardfor
+  option http-server-close
   timeout connect 20s
   timeout client 120s
   timeout server 120s
@@ -33,9 +35,8 @@ listen stats
 
 frontend f_tuner-pandora_http
   bind 104.131.201.115:80
+  reqadd X-Forwarded-Proto:\ http
   mode http
-  option http-server-close
-  option forwardfor
   option httplog
   capture request header Host len 50
   capture request header User-Agent len 150
@@ -43,10 +44,10 @@ frontend f_tuner-pandora_http
   use_backend dynip_http if { hdr(host) -i dynip.space }
 
 backend dynip_http
-#  source 0.0.0.0 usesrc clientip
   mode http
   option httplog
   option accept-invalid-http-response
+  redirect scheme https if !{ ssl_fc }
   server dynip.space 104.131.201.115:5000 check inter 10s fastinter 2s downinter 2s fall 1800
 
 backend b_tuner-pandora_http
@@ -54,18 +55,28 @@ backend b_tuner-pandora_http
   option httplog
   option accept-invalid-http-response
   server tuner.pandora.com tuner.pandora.com:80 check inter 10s fastinter 2s downinter 2s fall 1800
-#  server dynip.space 104.131.201.115:5000 check inter 10s fastinter 2s downinter 2s fall 1800
 
 frontend f_tuner-pandora_https
-  bind 104.131.201.115:443
+  bind 104.131.201.115:443 ssl crt /etc/haproxy/certs/dynip.space.pem
+  reqadd X-Forwarded-Proto:\ http
+  acl letsencrypt-acl path_beg /.well-known/acme-challenge/
   mode tcp
   option tcplog
   default_backend b_tuner-pandora_https
+  use_backend dynip_https if { ssl_fc_sni dynip.space }
+  use_backend letsencrypt-backend if letsencrypt-acl
+
+backend dynip_https
+  mode http
+  server dynip.space 104.131.201.115:5000 check inter 10s fastinter 2s downinter 2s fall 1800
 
 backend b_tuner-pandora_https
   mode tcp
   option tcplog
   server tuner.pandora.com tuner.pandora.com:443 check inter 10s fastinter 2s downinter 2s fall 1800
+
+backend letsencrypt-backend
+  server letsencrypt 127.0.0.1:54321
 
 backend b_deadend_http
   mode http
